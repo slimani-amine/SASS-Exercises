@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: $fontstack-text;
+    @include layout(black, 1rem);
+
+    @media (max-width: $small) {
+        @include layout(black, 1.25rem);
+    }
+}
+
+article {
+    h1 {
+        font-family: $fontstack-titles;
+        font-size: 1.75rem;
+    }
+
+    p {
+        padding-bottom: 2%;
+    }
+}
+
+a {
+    width: 130px;
+    font-family: $fontstack-titles;
+    @include layout(black, 1rem);
+    margin-left: 0;
+
+    &:hover {
+        @include layout(dimgray, 1rem);
+    }
+}

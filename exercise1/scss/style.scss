@@ -1,0 +1,66 @@
+$fontstack: 'Gotu', sans-serif;
+
+$fontsize: 1rem;
+
+$primary: lightskyblue;
+$primary_dark: darken($primary, 50%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: $primary_dark;
+}
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-right: 10px;
+      background-color: $primary;
+      outline: 1px solid $primary_dark;
+
+      a {
+        color: $primary_dark;
+        text-decoration: none;
+
+        &:hover {
+          font-weight: bold;
+          color: $primary;
+          background-color: $primary_dark;
+          transition: 1s;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    ul {
+      flex-direction: column;
+
+      li {
+        margin-right: 0;
+        margin-bottom: 5px; // Adjust the spacing between stacked navbar items
+      }
+    }
+  }
+}
+
+main ul {
+  margin-left: 20px;
+}
+
+body {
+  margin-top: 5%;
+}
